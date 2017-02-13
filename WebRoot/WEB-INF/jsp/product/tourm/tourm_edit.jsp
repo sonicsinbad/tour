@@ -45,7 +45,7 @@
 							</tr>
 							<tr>
 								<td style="width:75px;text-align: right;padding-top: 13px;">出发日期:</td>
-								<td><input class="span10 date-picker" name="STARTING" id="STARTING" value="${pd.STARTING}" type="text" data-date-format="yyyy-mm-dd" readonly="readonly" placeholder="出发日期" title="出发日期" style="width:98%;"/></td>
+								<td><input class="span10 date-picker" name="STARTING" id="STARTDATE" value="${pd.STARTDATE}" type="text" data-date-format="yyyy-mm-dd" readonly="readonly" placeholder="出发日期" title="出发日期" style="width:98%;"/></td>
 							</tr>
 							<tr>
 								<td style="width:75px;text-align: right;padding-top: 13px;">订单状态:</td>
@@ -146,8 +146,8 @@
 				$("#DAYS").focus();
 			return false;
 			}
-			if($("#STARTING").val()==""){
-				$("#STARTING").tips({
+			if($("#STARTDATE").val()==""){
+				$("#STARTDATE").tips({
 					side:3,
 		            msg:'请输入出发日期',
 		            bg:'#AE81FF',

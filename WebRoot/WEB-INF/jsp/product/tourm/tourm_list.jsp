@@ -90,7 +90,7 @@
 											<td class='center'>${var.LINE}</td>
 											<td class='center'>${var.AREA}</td>
 											<td class='center'>${var.DAYS}</td>
-											<td class='center'>${var.STARTING}</td>
+											<td class='center'>${var.STARTDATE}</td>
 											<td class='center'>${var.STATUS}</td>
 											<td class='center'>${var.PRICE}</td>
 											<td class='center'>${var.TOTALNUMBER}</td>

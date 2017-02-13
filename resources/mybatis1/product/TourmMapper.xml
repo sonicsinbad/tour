@@ -4,7 +4,7 @@
 	
 	<!--表名 -->
 	<sql id="tableName">
-		TB_TOURMTOURM
+		TB_TOURM
 	</sql>
 	
 	<!-- 字段 -->
@@ -12,7 +12,7 @@
 		LINE,	
 		AREA,	
 		DAYS,	
-		STARTING,	
+		STARTDATE,	
 		STATUS,	
 		PRICE,	
 		TOTALNUMBER,	
@@ -28,7 +28,7 @@
 		#{LINE},	
 		#{AREA},	
 		#{DAYS},	
-		#{STARTING},	
+		#{STARTDATE},	
 		#{STATUS},	
 		#{PRICE},	
 		#{TOTALNUMBER},	
@@ -66,7 +66,7 @@
 			LINE = #{LINE},
 			AREA = #{AREA},
 			DAYS = #{DAYS},
-			STARTING = #{STARTING},
+			STARTDATE = #{STARTDATE},
 			STATUS = #{STATUS},
 			PRICE = #{PRICE},
 			TOTALNUMBER = #{TOTALNUMBER},
