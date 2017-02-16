@@ -16,9 +16,8 @@
 		TRAFFIC,	
 		DINNER,	
 		LODGING,	
-		TRAVEL,	
-		TOURS_ID,
-		_ID
+		TRAVEL,
+		TOURS_ID
 	</sql>
 	
 	<!-- 字段值 -->
@@ -30,9 +29,8 @@
 		#{TRAFFIC},	
 		#{DINNER},	
 		#{LODGING},	
-		#{TRAVEL},	
-		#{TOURS_ID},
-		#{_ID}
+		#{TRAVEL},
+		#{TOURS_ID}
 	</sql>
 	
 	<!-- 新增-->
@@ -67,7 +65,6 @@
 			DINNER = #{DINNER},
 			LODGING = #{LODGING},
 			TRAVEL = #{TRAVEL},
-		TOURS_ID = TOURS_ID
 		where 
 		TOURS_ID = #{TOURS_ID}
 	</update>
@@ -89,7 +86,7 @@
 		from 
 		<include refid="tableName"></include>
 		where 
-		_ID = #{pd._ID}
+			1=1
 		<if test="pd.keywords!= null and pd.keywords != ''"><!-- 关键词检索 -->
 			and
 				(

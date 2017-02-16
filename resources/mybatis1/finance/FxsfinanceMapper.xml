@@ -4,7 +4,7 @@
 	
 	<!--表名 -->
 	<sql id="tableName">
-		E_FXSFINANCE
+		FE_FXSFINANCE
 	</sql>
 	
 	<!-- 字段 -->
