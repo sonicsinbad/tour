@@ -29,8 +29,8 @@
 					
 					<form action="tours/${msg }.do" name="Form" id="Form" method="post">
 						<input type="hidden" name="TOURS_ID" id="TOURS_ID" value="${pd.TOURS_ID}"/>
-						<input type="hidden" name="_ID" id="_ID" value="${pd._ID}"/>
-						<div id="zhongxin" style="padding-top: 13px;">
+						<input type="hidden" name="TOURM_ID" id="TOURM_ID" value="${pd.TOURM_ID}"/>
+						<div id="zhongxin1" style="padding-top: 13px;">
 						<table id="table_report" class="table table-striped table-bordered table-hover">
 							<tr>
 								<td style="width:75px;text-align: right;padding-top: 13px;">主表ID:</td>
@@ -72,7 +72,7 @@
 							</tr>
 						</table>
 						</div>
-						<div id="zhongxin2" class="center" style="display:none"><br/><br/><br/><br/><br/><img src="static/images/jiazai.gif" /><br/><h4 class="lighter block green">提交中...</h4></div>
+						<div id="zhongxin3" class="center" style="display:none"><br/><br/><br/><br/><br/><img src="static/images/jiazai.gif" /><br/><h4 class="lighter block green">提交中...</h4></div>
 					</form>
 					</div>
 					<!-- /.col -->
@@ -180,8 +180,8 @@
 			return false;
 			}
 			$("#Form").submit();
-			$("#zhongxin").hide();
-			$("#zhongxin2").show();
+			$("#zhongxin1").hide();
+			$("#zhongxin3").show();
 		}
 		
 		$(function() {

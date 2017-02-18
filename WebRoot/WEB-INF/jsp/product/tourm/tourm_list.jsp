@@ -107,6 +107,9 @@
 													<a class="btn btn-xs btn-success" title="编辑" onclick="edit('${var.TOURM_ID}');">
 														<i class="ace-icon fa fa-pencil-square-o bigger-120" title="编辑"></i>
 													</a>
+													<a class="btn btn-xs btn-success" title="添加明细" onclick="goTours('${var.TOURM_ID}');">
+														<i class="ace-icon fa fa-pencil-square-o bigger-120" title="添加明细"></i>
+													</a>
 													</c:if>
 													<c:if test="${QX.del == 1 }">
 													<a class="btn btn-xs btn-danger" onclick="del('${var.TOURM_ID}');">
@@ -334,7 +337,27 @@
 			 };
 			 diag.show();
 		}
-		
+
+		//跳转到产品明细
+		function goTours(Id){
+			 top.jzts();
+			 var diag = new top.Dialog();
+			 diag.Drag=true;
+			 diag.Title ="产品明细";
+			 diag.URL = '<%=basePath%>tours/list.do?TOURM_ID='+Id;
+			 diag.Width = 1024;
+			 diag.Height = 768;
+			 diag.Modal = true;				//有无遮罩窗口
+			 diag. ShowMaxButton = true;	//最大化按钮
+		     diag.ShowMinButton = true;		//最小化按钮
+			 diag.CancelEvent = function(){ //关闭事件
+				 if(diag.innerFrame.contentWindow.document.getElementById('zhongxin').style.display == 'none'){
+					 nextPage(${page.currentPage});
+				}
+				diag.close();
+			 };
+			 diag.show();
+		}
 		//导出excel
 		function toExcel(){
 			window.location.href='<%=basePath%>tourm/excel.do';

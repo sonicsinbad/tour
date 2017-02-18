@@ -32,14 +32,18 @@
 							
 						<!-- 检索  -->
 						<form action="tours/list.do" method="post" name="Form" id="Form">
-						<input type="hidden" name="_ID" id="_ID" value="${pd._ID}"/>
+						<div id="zhongxin" style="padding-top: 13px;">
+						<input type="hidden" name="TOURM_ID" id="TOURM_ID" value="${pd.TOURM_ID }"/>
 						<table style="margin-top:5px;">
 							<tr>
 								<td>
 									<div class="nav-search">
 										<span class="input-icon">
+											<!-- 
 											<input type="text" placeholder="这里输入关键词" class="nav-search-input" id="nav-search-input" autocomplete="off" name="keywords" value="${pd.keywords }" placeholder="这里输入关键词"/>
 											<i class="ace-icon fa fa-search nav-search-icon"></i>
+											 -->
+											 ${pd.TOURM_ID }
 										</span>
 									</div>
 								</td>
@@ -180,6 +184,7 @@
 							</tr>
 						</table>
 						</div>
+						</div>
 						</form>
 					
 						</div>
@@ -270,26 +275,26 @@
 		//新增
 		function add(){
 			 top.jzts();
-			 var diag = new top.Dialog();
-			 diag.Drag=true;
-			 diag.Title ="新增";
-			 diag.URL = '<%=basePath%>tours/goAdd.do?_ID=${pd._ID}';
-			 diag.Width = 450;
-			 diag.Height = 355;
-			 diag.Modal = true;				//有无遮罩窗口
-			 diag. ShowMaxButton = true;	//最大化按钮
-		     diag.ShowMinButton = true;		//最小化按钮
-			 diag.CancelEvent = function(){ //关闭事件
-				 if(diag.innerFrame.contentWindow.document.getElementById('zhongxin').style.display == 'none'){
+			 var diag1 = new top.Dialog();
+			 diag1.Drag=true;
+			 diag1.Title ="新增";
+			 diag1.URL = '<%=basePath%>tours/goAdd.do?TOURM_ID=${pd.TOURM_ID}';
+			 diag1.Width = 450;
+			 diag1.Height = 355;
+			 diag1.Modal = true;				//有无遮罩窗口
+			 diag1. ShowMaxButton = true;	//最大化按钮
+		     diag1.ShowMinButton = true;		//最小化按钮
+			 diag1.CancelEvent = function(){ //关闭事件
+				 if(diag1.innerFrame.contentWindow.document.getElementById('zhongxin1').style.display == 'none'){
 					 if('${page.currentPage}' == '0'){
 						 tosearch();
 					 }else{
 						 nextPage(${page.currentPage});
 					 }
 				}
-				diag.close();
+				diag1.close();
 			 };
-			 diag.show();
+			 diag1.show();
 		}
 		
 		//删除
@@ -308,22 +313,22 @@
 		//修改
 		function edit(Id){
 			 top.jzts();
-			 var diag = new top.Dialog();
-			 diag.Drag=true;
-			 diag.Title ="编辑";
-			 diag.URL = '<%=basePath%>tours/goEdit.do?TOURS_ID='+Id;
-			 diag.Width = 450;
-			 diag.Height = 355;
-			 diag.Modal = true;				//有无遮罩窗口
-			 diag. ShowMaxButton = true;	//最大化按钮
-		     diag.ShowMinButton = true;		//最小化按钮
-			 diag.CancelEvent = function(){ //关闭事件
-				 if(diag.innerFrame.contentWindow.document.getElementById('zhongxin').style.display == 'none'){
+			 var diag1 = new top.Dialog();
+			 diag1.Drag=true;
+			 diag1.Title ="编辑";
+			 diag1.URL = '<%=basePath%>tours/goEdit.do?TOURS_ID='+Id;
+			 diag1.Width = 450;
+			 diag1.Height = 355;
+			 diag1.Modal = true;				//有无遮罩窗口
+			 diag1. ShowMaxButton = true;	//最大化按钮
+		     diag1.ShowMinButton = true;		//最小化按钮
+			 diag1.CancelEvent = function(){ //关闭事件
+				 if(diag1.innerFrame.contentWindow.document.getElementById('zhongxin1').style.display == 'none'){
 					 nextPage(${page.currentPage});
 				}
-				diag.close();
+				diag1.close();
 			 };
-			 diag.show();
+			 diag1.show();
 		}
 		
 		//批量操作

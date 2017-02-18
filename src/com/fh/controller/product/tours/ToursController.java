@@ -100,6 +100,8 @@ public class ToursController extends BaseController {
 		PageData pd = new PageData();
 		pd = this.getPageData();
 		String keywords = pd.getString("keywords");				//关键词检索条件
+		String tourm_id = pd.getString("TOURM_ID");
+		pd.put("TOURM_ID", tourm_id);
 		if(null != keywords && !"".equals(keywords)){
 			pd.put("keywords", keywords.trim());
 		}
