@@ -64,7 +64,7 @@
 			TRAFFIC = #{TRAFFIC},
 			DINNER = #{DINNER},
 			LODGING = #{LODGING},
-			TRAVEL = #{TRAVEL},
+			TRAVEL = #{TRAVEL}
 		where 
 		TOURS_ID = #{TOURS_ID}
 	</update>

@@ -29,7 +29,6 @@
 					
 					<form action="tours/${msg }.do" name="Form" id="Form" method="post">
 						<input type="hidden" name="TOURS_ID" id="TOURS_ID" value="${pd.TOURS_ID}"/>
-						<input type="hidden" name="TOURM_ID" id="TOURM_ID" value="${pd.TOURM_ID}"/>
 						<div id="zhongxin1" style="padding-top: 13px;">
 						<table id="table_report" class="table table-striped table-bordered table-hover">
 							<tr>
